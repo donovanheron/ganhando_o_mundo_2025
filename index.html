@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Do Brasil ao Canadá</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- PÁGINA 1 -->
+  <div id="page1" class="page active">
+    <div class="page-content">
+      <h1>Do Brasil ao Canadá</h1>
+      <h2>Programa Ganhando o Mundo 2025</h2>
+      <button onclick="goToPage(2)">Avançar</button>
+    </div>
+  </div>
+
+  <!-- PÁGINA 2 -->
+  <div id="page2" class="page">
+    <button class="voltar" onclick="goToPage(1)">Voltar ao Início</button>
+    <div class="container">
+      <h2>Você é aluno do 6º ao 9º ano?</h2>
+      <button onclick="selectAnswer('sim')">Sim, eu sou</button>
+      <button onclick="selectAnswer('medio')">Não, estou no Ensino Médio</button>
+      <button onclick="selectAnswer('outro')">Outro</button>
+    </div>
+  </div>
+
+  <!-- PÁGINA 3 (se SIM) -->
+  <div id="page3" class="page">
+    <button class="voltar" onclick="goToPage(1)">Voltar ao Início</button>
+    <div class="container">
+      <h2>Informações sobre o Programa</h2>
+      <p>Se você tem o sonho de ir viajar para fora, mas acha que ele ainda é muito distante, venha descobrir o que o Programa Ganhando o Mundo do Estado do Paraná pode oferecer para você!</p>
+
+      <p>O programa é totalmente gratuito e te proporciona um intercâmbio de 5 meses em algum país.</p>
+
+      <h3>Para participar é necessário:</h3>
+      <ul>
+        <li>Ter estudado do 6º ao 9º ano em escola pública estadual do Paraná.</li>
+        <li>Ter no mínimo 14 e no máximo 17 anos e seis meses de idade na data de embarque.</li>
+        <li>Média anual acima de 7 em todas as matérias do 9º ano.</li>
+        <li>Presença anual acima de 85% em todas as matérias do 9º ano.</li>
+        <li>Estar no 1º ano do Ensino Médio no ano da inscrição.</li>
+      </ul>
+
+      <button onclick="goToPage(4)">Continuar</button>
+    </div>
+  </div>
+
+  <!-- PÁGINA 4 (vídeo) -->
+  <div id="page4" class="page">
+    <button class="voltar" onclick="goToPage(1)">Voltar ao Início</button>
+    <div class="container">
+      <h2>Experiência do Intercâmbio</h2>
+      <p>Insira seu vídeo abaixo:</p>
+      <input type="file" accept="video/*" />
+      <button onclick="goToPage(5)" style="margin-top: 20px;">Continuar</button>
+    </div>
+  </div>
+
+  <!-- PÁGINA 5 (FINAL) -->
+  <div id="page5" class="page">
+    <button class="voltar" onclick="goToPage(1)">Voltar ao Início</button>
+    <div class="container" style="text-align:center;">
+      <h2>Obrigado por conhecer o programa!</h2>
+      <p>Compartilhe esta página com seus amigos para que mais alunos descubram essa oportunidade!</p>
+      <button onclick="sharePage()">Compartilhar</button>
+    </div>
+  </div>
+
+  <!-- MENU FLUTUANTE -->
+  <div id="menuFlutuante" class="menu-flutuante">
+    <button onclick="goToPage(1)">Início</button>
+    <button onclick="goToPage(2)">Pergunta</button>
+    <button onclick="goToPage(3)">Requisitos</button>
+    <button onclick="goToPage(4)">Vídeo</button>
+    <button onclick="goToPage(5)">Final</button>
+  </div>
+
+  <!-- RODAPÉ -->
+  <footer class="rodape">
+    <div class="footer-icons">
+      <div class="icon-placeholder">PR</div>
+      <div class="icon-placeholder">CA</div>
+    </div>
+    <p>Programa Ganhando o Mundo - 2025</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
