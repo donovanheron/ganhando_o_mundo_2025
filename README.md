@@ -1,0 +1,1 @@
+# ganhando_o_mundo_2025
